@@ -1,6 +1,6 @@
 .form {
   width: 505px;
-  height: 465px;
+  height: 442px;
   left: calc(50% - 505px / 2 - 0.5px);
   top: calc(50% - 465px / 2);
   background: #ffffff;
@@ -15,8 +15,22 @@
   font-size: 46px;
   line-height: 39px;
   letter-spacing: 0.025em;
-  text-decoration-line: underline;
-  color: #424242;
-  margin-top: 47px;
-  margin-bottom: 65px;
+  color: #424242; 
+  margin: 33px 0px;
+}
+
+.form h2::after{
+  content: "";
+  display: block;
+  margin: 5px auto;
+  background-color: #424242;
+  height: 1px;
+  width: 60%;
+}
+
+.form .box-inputs{
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
+  padding: 0px 51px;
 }
