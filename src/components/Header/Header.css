@@ -23,7 +23,6 @@
 }
 .header .box-image-1 > span h1 {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: "KoPub Batang";
   font-weight: 500;
   font-size: 120px;
   line-height: 93px;
@@ -32,7 +31,6 @@
   margin-bottom: 27px;
 }
 .header .box-image-1 > span h2 {
-  font-family: "KoPub Batang";
   text-align: end;
   font-weight: 700;
   font-size: 40px;

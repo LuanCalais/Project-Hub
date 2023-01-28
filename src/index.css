@@ -11,9 +11,18 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "KoPub Batang";
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.content{
+  height: 100vh;
+  background: linear-gradient(180deg, #FBB2B1 0%, rgba(251, 178, 177, 0) 163.1%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

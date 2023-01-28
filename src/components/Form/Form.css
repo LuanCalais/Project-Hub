@@ -1,0 +1,22 @@
+.form {
+  width: 505px;
+  height: 465px;
+  left: calc(50% - 505px / 2 - 0.5px);
+  top: calc(50% - 465px / 2);
+  background: #ffffff;
+  box-shadow: 7px 7px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+.form h2 {
+  font-style: normal;
+  text-align: center;
+  font-weight: 500;
+  font-size: 46px;
+  line-height: 39px;
+  letter-spacing: 0.025em;
+  text-decoration-line: underline;
+  color: #424242;
+  margin-top: 47px;
+  margin-bottom: 65px;
+}
