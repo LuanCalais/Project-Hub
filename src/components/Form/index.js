@@ -1,3 +1,4 @@
+import Button from "../Button";
 import Input from "../Input";
 import SelectInput from "../SelectInput";
 import "./Form.css";
@@ -18,7 +19,9 @@ const Form = () => {
           placeholder="Insira o link da imagem do github"
           maxLength="100"
         />
-        <SelectInput items={options}   placeholder="Selecione o cargo"/>
+        <SelectInput items={options} placeholder="Selecione o cargo" />
+        <Button text="Criar Time" color="#fbb8b7" textColor="#fff"/>
+        <Button text="Limpar Campos" color="#fff" textColor="#999999"/>
       </div>
     </div>
   );

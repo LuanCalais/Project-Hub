@@ -3,6 +3,10 @@
   src: url("../../../public/assets/fonts/Montserrat-Medium.ttf");
 }
 
+.select-input {
+  font-family: "monserrat";
+}
+
 .select-input .css-13cymwt-control,
 .select-active,
 .select-active > div + div > span + div {
@@ -15,7 +19,6 @@
 
 .select-input .css-t3ipsp-control,
 .select-input .css-13cymwt-control {
-  font-family: "monserrat";
   height: 30px;
   min-height: auto;
   width: 100%;
