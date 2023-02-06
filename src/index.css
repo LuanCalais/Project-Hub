@@ -1,6 +1,6 @@
-@font-face{
+@font-face {
   font-family: "KoPub";
-  src: url('../public/assets/fonts/kopubbatang-regular.ttf');
+  src: url("../public/assets/fonts/kopubbatang-regular.ttf");
 }
 
 body {
@@ -10,17 +10,28 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
-.content{
+.box-form,
+.box-team {
   height: 100vh;
-  background: linear-gradient(180deg, #FBB2B1 0%, rgba(251, 178, 177, 0) 163.1%);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+}
+
+.box-form {
+  background: linear-gradient(
+    180deg,
+    #fbb2b1 0%,
+    rgba(251, 178, 177, 0) 163.1%
+  );
+}
+
+.box-team {
+  background: #fde1e1;
 }
