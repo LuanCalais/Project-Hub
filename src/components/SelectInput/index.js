@@ -1,7 +1,5 @@
 import "./SelectInput.css";
 import Select from "react-select";
-import { useState } from "react";
-
 
 const SelectInput = ({ items, placeholder, onWrite }) => {
   return (
