@@ -1,7 +1,7 @@
 import "./Footer.css";
 import icon from "./Icon.png";
 
-const Footer = ({ today }) => {
+const Footer = () => {
   return (
     <>
       <div className="footer">
