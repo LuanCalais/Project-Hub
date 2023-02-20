@@ -1,8 +1,12 @@
+import Footer from "./components/Footer";
 import Form from "./components/Form";
 import Header from "./components/Header";
 import Team from "./components/Team";
+import { useState } from "react";
 
 function App() {
+  const today = useState('');
+  
   const teams = [
     {
       label: "Develop",
@@ -32,6 +36,8 @@ function App() {
       <div className="box-team">
         <Team />
       </div>
+
+      <Footer today={today}/>
     </>
   );
 }
