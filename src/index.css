@@ -3,11 +3,17 @@
   src: url("../public/assets/fonts/kopubbatang-regular.ttf");
 }
 
+@font-face {
+  font-family: "monserrat";
+  src: url("../public/assets/fonts/Montserrat-Medium.ttf");
+}
+
 body {
   margin: 0;
   font-family: "KoPub";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
 }
 
 * {

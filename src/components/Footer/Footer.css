@@ -1,0 +1,44 @@
+.footer {
+  background: #ff7070;
+  min-height: 93px;
+  height: auto;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 60px 23px 60px;
+}
+
+.footer .box-info {
+  border-top: 1px solid #ff9090;
+  padding-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer .box-info div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.footer .box-info div > span {
+  font-family: "monserrat";
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 13px;
+  letter-spacing: 0.025em;
+  color: #d9d9d9;
+}
+
+.footer .box-info .col-two {
+  justify-content: end;
+  column-gap: 5px;
+}
+.footer .box-info .col-two i {
+  font-size: 45px;
+  color: #ff9090;
+}
