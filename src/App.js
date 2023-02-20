@@ -8,7 +8,7 @@ function App() {
   const today = useState('');
   
   const teams = [
-    {
+    { 
       label: "Develop",
       value: "Develop",
     },
