@@ -1,0 +1,24 @@
+.team {
+  width: 100%;
+  padding: 53px;
+}
+
+.team {
+  text-align: center;
+}
+
+.team h1 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 39px;
+  letter-spacing: 0.055em;
+  color: #424242;
+  margin-bottom: 35px;
+}
+
+.team .cards-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 70px;
+}

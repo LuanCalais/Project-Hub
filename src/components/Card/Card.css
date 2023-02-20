@@ -1,3 +1,62 @@
-h1 {
-  color: red;
+.card {
+  min-height: 253px;
+  width: 234px;
+  border-radius: 35px;
+  background: #ffffff;
+  box-shadow: 5px 6px 16px rgba(0, 0, 0, 0.25);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card * {
+  font-family: "monserrat";
+}
+
+.card .card-header {
+  position: absolute;
+  top: 0;
+  border-radius: 35px 35px 0px 0px;
+  min-height: 40px;
+  width: 100%;
+  background: #ff7070;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.01rem;
+}
+.card .card-picture {
+  height: 108px;
+  width: 108px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d9d9d9;
+  position: absolute;
+  top: 3.5em;
+}
+
+.card .card-info {
+    position: absolute;
+    bottom: 25px;
+}
+
+.card .card-info h5 {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0.025em;
+  color: #666666;
+}
+
+.card .card-info sub {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 17px;
+    letter-spacing: 0.025em;
+    color: #666666;
 }
