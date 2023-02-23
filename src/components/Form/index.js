@@ -4,14 +4,23 @@ import Input from "../Input";
 import SelectInput from "../SelectInput";
 import "./Form.css";
 
-const Form = ({ teamNames }) => {
+const Form = ({ teamNames, addNewCollaborator }) => {
   const [collaboratorName, setCollaboratorName] = useState("");
+  const [legend, setLegend] = useState("");
   const [positionName, setPositionName] = useState("");
   const [pictureImageLink, setPictureImageLink] = useState("");
   const [team, setTeam] = useState("");
 
   const saveInfo = (event) => {
     event.preventDefault();
+
+    addNewCollaborator({
+      collaboratorName,
+      legend,
+      positionName,
+      pictureImageLink,
+      team,
+    });
   };
 
   return (
@@ -26,7 +35,13 @@ const Form = ({ teamNames }) => {
             require={true}
             onWrite={(value) => setCollaboratorName(value)}
           />
-          {collaboratorName}
+          <Input
+            value={legend}
+            placeholder="Escreva uma legenda"
+            maxLength="50"
+            require={false}
+            onWrite={(value) => setLegend(value)}
+          />
           <Input
             value={positionName}
             placeholder="Escreva o cargo"
@@ -36,7 +51,7 @@ const Form = ({ teamNames }) => {
           />
           <Input
             value={pictureImageLink}
-            placeholder="Insira o link da imagem do github"
+            placeholder="https://github.com/SeuRepositorio.png"
             maxLength="100"
             require={true}
             onWrite={(value) => setPictureImageLink(value)}

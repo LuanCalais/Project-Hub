@@ -1,20 +1,28 @@
 import Card from "../Card";
 import "./Team.css";
 
-const Team = () => {
+const Team = ({ label, primaryColor, secondaryColor, collaborators }) => {
+  const cssLabel = { borderBottom: `3px solid ${primaryColor}` };
+  const cssBackgrond = {background: secondaryColor}
   return (
     <>
-      <div className="team">
-        <h1>
-          Nome do time
-        </h1>
-        <div className="cards-box">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+      {collaborators.length > 0 && (
+        <div style={cssBackgrond} className="team">
+          <h1 style={cssLabel}>{label}</h1>
+          <div className="cards-box">
+            {collaborators.map((col) => (
+              <Card
+                key={Math.random()}
+                name={col.collaboratorName}
+                picture={col.pictureImageLink}
+                position={col.positionName}
+                legend={col.legend}
+                primaryColor={primaryColor}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 };
