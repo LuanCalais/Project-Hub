@@ -3,12 +3,13 @@ import Form from "./components/Form";
 import Header from "./components/Header";
 import Team from "./components/Team";
 import { useState } from "react";
+import RootPage from "./components/RootPage";
 
 function App() {
-  const today = useState('');
-  
+  const today = useState("");
+
   const teams = [
-    { 
+    {
       label: "Develop",
       value: "Develop",
     },
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <>
+      <RootPage />
       <Header />
       <div className="box-form">
         <Form teamNames={teams} />
@@ -37,7 +39,7 @@ function App() {
         <Team />
       </div>
 
-      <Footer today={today}/>
+      <Footer today={today} />
     </>
   );
 }
