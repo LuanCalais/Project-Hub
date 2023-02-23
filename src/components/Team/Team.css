@@ -1,19 +1,18 @@
 .team {
+  text-align: center;
   width: 100%;
   padding: 53px;
 }
 
-.team {
-  text-align: center;
-}
-
 .team h1 {
+  width: 20%;
   font-weight: 600;
   font-size: 30px;
   line-height: 39px;
   letter-spacing: 0.055em;
   color: #424242;
   margin-bottom: 35px;
+  padding: 0.12em;
 }
 
 .team .cards-box {

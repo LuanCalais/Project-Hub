@@ -34,8 +34,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;
 }
 
-.box-form,
-.box-team {
+.box-form {
   height: 100vh;
   display: flex;
   align-items: center;

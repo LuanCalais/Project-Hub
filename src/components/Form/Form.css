@@ -1,11 +1,12 @@
 .form {
   width: 505px;
-  height: 442px;
+  height: auto;
   left: calc(50% - 505px / 2 - 0.5px);
   top: calc(50% - 465px / 2);
   background: #ffffff;
   box-shadow: 7px 7px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
+  padding-bottom: 40px;
 }
 
 .form h2 {

@@ -1,20 +1,20 @@
-import './Card.css'
+import "./Card.css";
 
-const Card = () => {
+const Card = ({ name, legend, position, picture, primaryColor }) => {
+
+  const cssHeader = {background: primaryColor}
   return (
-    <div className='card'>
-        <div className='card-header'>
-            {/* TODO: Aqui vai a função do integrante */}
-        </div>
+    <div className="card">
+      <div className="card-header" style={cssHeader}>{position}</div>
 
-        <div className='card-picture'>
-            {/* TODO: Aqui vai a foto do participante */}
-        </div>
+      <div className="card-picture">
+        <img src={picture} alt={name}/>
+      </div>
 
-        <div className='card-info'>
-            <h5>Nome do participante</h5>
-            <sub>Sub título</sub>
-        </div>
+      <div className="card-info">
+        <h5>{name}</h5>
+        <sub>{legend}</sub>
+      </div>
     </div>
   );
 };
