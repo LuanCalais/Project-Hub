@@ -21,6 +21,19 @@ body {
   box-sizing: border-box;
 }
 
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(3, 3, 3);   
+  border-radius: 20px;
+}
+
 .box-form,
 .box-team {
   height: 100vh;
