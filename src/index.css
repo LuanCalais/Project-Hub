@@ -7,6 +7,9 @@
   font-family: "monserrat";
   src: url("../public/assets/fonts/Montserrat-Medium.ttf");
 }
+html {
+  overflow-x: hidden;
+}
 
 body {
   margin: 0;
@@ -30,7 +33,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgb(3, 3, 3);   
+  background-color: rgb(3, 3, 3);
   border-radius: 20px;
 }
 

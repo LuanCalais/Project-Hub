@@ -1,4 +1,5 @@
 import "./Header.css";
+import banner from "./banner.png"
 
 const Header = () => {
   return (
@@ -8,11 +9,10 @@ const Header = () => {
           <h1>Project-Hub</h1>
           <h2>Organize seus projetos e times </h2>
         </span>
-        <img src="/assets/img/forms.svg" alt="forms" />
       </div>
 
       <div className="box-image-2">
-        <img src="/assets/img/banner.png" alt="banner" />
+        <img src={banner} alt="banner" />
       </div>
     </header>
   );
