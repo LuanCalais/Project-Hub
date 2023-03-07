@@ -1,9 +1,15 @@
 import Card from "../Card";
 import "./Team.css";
 
-const Team = ({ label, primaryColor, secondaryColor, collaborators }) => {
+const Team = ({
+  label,
+  primaryColor,
+  secondaryColor,
+  collaborators,
+  deleteCollaborator,
+}) => {
   const cssLabel = { borderBottom: `3px solid ${primaryColor}` };
-  const cssBackgrond = {background: secondaryColor}
+  const cssBackgrond = { background: secondaryColor };
   return (
     <>
       {collaborators.length > 0 && (
@@ -18,6 +24,7 @@ const Team = ({ label, primaryColor, secondaryColor, collaborators }) => {
                 position={col.positionName}
                 legend={col.legend}
                 primaryColor={primaryColor}
+                deleteCollaborator={deleteCollaborator}
               />
             ))}
           </div>

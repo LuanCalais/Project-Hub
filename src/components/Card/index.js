@@ -1,6 +1,6 @@
 import "./Card.css";
 
-const Card = ({ name, legend, position, picture, primaryColor }) => {
+const Card = ({ name, legend, position, picture, primaryColor, deleteCollaborator }) => {
 
   const cssHeader = {background: primaryColor}
   return (
