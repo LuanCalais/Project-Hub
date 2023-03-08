@@ -22,6 +22,7 @@ const Team = ({
                 name={col.collaboratorName}
                 picture={col.pictureImageLink}
                 position={col.positionName}
+                id={col.id}
                 legend={col.legend}
                 primaryColor={primaryColor}
                 deleteCollaborator={deleteCollaborator}
