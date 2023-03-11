@@ -4,12 +4,14 @@ import Input from "../Input";
 import SelectInput from "../SelectInput";
 import "./Form.css";
 
-const Form = ({ teamNames, addNewCollaborator }) => {
+const Form = ({ teamNames, addNewCollaborator, addNewTeam }) => {
   const [collaboratorName, setCollaboratorName] = useState("");
   const [legend, setLegend] = useState("");
   const [positionName, setPositionName] = useState("");
   const [pictureImageLink, setPictureImageLink] = useState("");
   const [team, setTeam] = useState("");
+  const [teamName, setTeamName] = useState("");
+  const [teamColor, setTeamColor] = useState("");
 
   const saveInfo = (event) => {
     event.preventDefault();
@@ -26,46 +28,73 @@ const Form = ({ teamNames, addNewCollaborator }) => {
   return (
     <div className="form">
       <h2>Crie seu time</h2>
-      <form onSubmit={saveInfo}>
-        <div className="box-inputs">
-          <Input
-            value={collaboratorName}
-            placeholder="Escreva o nome do integrante"
-            maxLength="50"
-            require={true}
-            onWrite={(value) => setCollaboratorName(value)}
-          />
-          <Input
-            value={legend}
-            placeholder="Escreva uma legenda"
-            maxLength="50"
-            require={false}
-            onWrite={(value) => setLegend(value)}
-          />
-          <Input
-            value={positionName}
-            placeholder="Escreva o cargo"
-            maxLength="50"
-            require={true}
-            onWrite={(value) => setPositionName(value)}
-          />
-          <Input
-            value={pictureImageLink}
-            placeholder="https://github.com/SeuRepositorio.png"
-            maxLength="100"
-            require={true}
-            onWrite={(value) => setPictureImageLink(value)}
-          />
-          <SelectInput
-            value={team}
-            items={teamNames}
-            placeholder="Selecione o time"
-            onWrite={(event) => setTeam(event.value)}
-          />
-          <Button text="Criar Time" color="#fbb8b7" textColor="#fff" />
-          <Button text="Limpar Campos" color="#fff" textColor="#999999" />
-        </div>
-      </form>
+      <span className="box-forms">
+        <form onSubmit={saveInfo}>
+          <div className="box-inputs">
+            <Input
+              value={collaboratorName}
+              placeholder="Escreva o nome do integrante"
+              maxLength="50"
+              require
+              onWrite={(value) => setCollaboratorName(value)}
+            />
+            <Input
+              value={legend}
+              placeholder="Escreva uma legenda"
+              maxLength="50"
+              require={false}
+              onWrite={(value) => setLegend(value)}
+            />
+            <Input
+              value={positionName}
+              placeholder="Escreva o cargo"
+              maxLength="50"
+              require
+              onWrite={(value) => setPositionName(value)}
+            />
+            <Input
+              value={pictureImageLink}
+              placeholder="https://github.com/SeuRepositorio.png"
+              maxLength="100"
+              require
+              onWrite={(value) => setPictureImageLink(value)}
+            />
+            <SelectInput
+              value={team}
+              items={teamNames}
+              placeholder="Selecione o time"
+              onWrite={(event) => setTeam(event.value)}
+            />
+            <Button text="Criar Integrante" color="#fbb8b7" textColor="#fff" />
+          </div>
+        </form>
+
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+            addNewTeam("oskdaoskdasokd");
+          }}
+        >
+          <div className="box-inputs">
+            <Input
+              value={teamName}
+              placeholder="Insira o nome do time"
+              maxLength="100"
+              require
+              onWrite={(value) => setTeamName(value)}
+            />
+
+            <Input
+              value={teamColor}
+              placeholder="Insira a cor do time"
+              type="color"
+              require
+              onWrite={(value) => setPictureImageLink(value)}
+            />
+            <Button text="Criar Time" color="#fbb8b7" textColor="#fff" />
+          </div>
+        </form>
+      </span>
     </div>
   );
 };

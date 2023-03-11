@@ -1,5 +1,5 @@
 .form {
-  width: 505px;
+  width: 705px;
   height: auto;
   left: calc(50% - 505px / 2 - 0.5px);
   top: calc(50% - 465px / 2);
@@ -7,6 +7,14 @@
   box-shadow: 7px 7px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   padding-bottom: 40px;
+}
+
+.form .box-forms{
+  display: flex;
+  justify-content: space-around;
+}
+.form .box-forms form{
+  width: 100%;
 }
 
 .form h2 {
@@ -33,5 +41,6 @@
   display: flex;
   flex-direction: column;
   row-gap: 22px;
-  padding: 0px 51px;
+  padding: 0px 20px;
+  width: 100%;
 }
