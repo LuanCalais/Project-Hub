@@ -40,15 +40,15 @@
   top: 3.5em;
 }
 
-.card .card-picture img{
-  height: 108px!important;
-  width: 108px!important;
+.card .card-picture img {
+  height: 108px !important;
+  width: 108px !important;
   border-radius: 50%;
 }
 
 .card .card-info {
-    position: absolute;
-    bottom: 25px;
+  position: absolute;
+  bottom: 25px;
 }
 
 .card .card-info h5 {
@@ -60,17 +60,26 @@
 }
 
 .card .card-info sub {
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 17px;
-    letter-spacing: 0.025em;
-    color: #666666;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 17px;
+  letter-spacing: 0.025em;
+  color: #666666;
 }
 
-.card .delete{
+.card .delete {
   position: absolute;
   cursor: pointer;
   right: 10px;
   bottom: 10px;
   color: #ff7070;
+}
+
+.card .favorite-box {
+  z-index: 9;
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  color: rgb(179, 179, 179);
+  cursor: pointer;
 }
