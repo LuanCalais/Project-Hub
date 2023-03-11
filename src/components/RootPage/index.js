@@ -43,11 +43,21 @@ const RootPage = () => {
 
   const addNewCollaborator = (col) => {
     col.id = uuidv4();
+    col.favorite = false;
     setCollaborators([...collaborators, col]);
   };
 
   function deleteCollaborator(id) {
     setCollaborators(collaborators.filter((col) => col.id !== id));
+  }
+
+  function favoriteChange(id) {
+    setCollaborators(
+      collaborators.map((col) => {
+        if (col.id === id) col.favorite = !col.favorite;
+        return col;
+      })
+    );
   }
 
   return (
@@ -73,6 +83,7 @@ const RootPage = () => {
               (col) => col.team === team.label
             )}
             deleteCollaborator={deleteCollaborator}
+            favoriteChange={favoriteChange}
           />
         ))}
       </div>

@@ -7,6 +7,7 @@ const Team = ({
   secondaryColor,
   collaborators,
   deleteCollaborator,
+  favoriteChange,
 }) => {
   const cssLabel = { borderBottom: `3px solid ${primaryColor}` };
   const cssBackgrond = { background: secondaryColor };
@@ -26,6 +27,8 @@ const Team = ({
                 legend={col.legend}
                 primaryColor={primaryColor}
                 deleteCollaborator={deleteCollaborator}
+                favorite={col.favorite}
+                favoriteChange={favoriteChange}
               />
             ))}
           </div>
