@@ -47,6 +47,10 @@ const RootPage = () => {
     setCollaborators([...collaborators, col]);
   };
 
+  const addNewTeam = (team) => {
+    console.log(team);
+  };
+
   function deleteCollaborator(id) {
     setCollaborators(collaborators.filter((col) => col.id !== id));
   }
@@ -69,6 +73,7 @@ const RootPage = () => {
           addNewCollaborator={(collaborator) =>
             addNewCollaborator(collaborator)
           }
+          addNewTeam={addNewTeam}
         />
       </div>
 
