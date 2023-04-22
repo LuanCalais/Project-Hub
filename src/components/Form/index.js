@@ -15,14 +15,17 @@ const Form = ({ teamNames, addNewCollaborator, addNewTeam }) => {
 
   const saveInfo = (event) => {
     event.preventDefault();
-
-    addNewCollaborator({
+    addNewCollaborator({  
       collaboratorName,
       legend,
       positionName,
       pictureImageLink,
       team,
     });
+    setCollaboratorName('')
+    setLegend('')
+    setPositionName('')
+    setPictureImageLink('')
   };
 
   return (
@@ -32,35 +35,35 @@ const Form = ({ teamNames, addNewCollaborator, addNewTeam }) => {
         <form onSubmit={saveInfo}>
           <div className="box-inputs">
             <Input
-              value={collaboratorName}
+              inputValue={collaboratorName}
               placeholder="Escreva o nome do integrante"
               maxLength="50"
               require
               onWrite={(value) => setCollaboratorName(value)}
             />
             <Input
-              value={legend}
+              inputValue={legend}
               placeholder="Escreva uma legenda"
               maxLength="50"
               require={false}
               onWrite={(value) => setLegend(value)}
             />
             <Input
-              value={positionName}
+              inputValue={positionName}
               placeholder="Escreva o cargo"
               maxLength="50"
               require
               onWrite={(value) => setPositionName(value)}
             />
             <Input
-              value={pictureImageLink}
+              inputValue={pictureImageLink}
               placeholder="https://github.com/SeuRepositorio.png"
               maxLength="100"
               require
               onWrite={(value) => setPictureImageLink(value)}
             />
             <SelectInput
-              value={team}
+              inputValue={team}
               items={teamNames}
               placeholder="Selecione o time"
               onWrite={(event) => setTeam(event.value)}

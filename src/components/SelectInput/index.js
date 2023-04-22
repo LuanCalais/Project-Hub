@@ -1,10 +1,11 @@
 import "./SelectInput.css";
 import Select from "react-select";
 
-const SelectInput = ({ items, placeholder, onWrite }) => {
+const SelectInput = ({ inputValue, items, placeholder, onWrite }) => {
   return (
     <div className="select-input">
       <Select
+        value={inputValue}
         options={items}
         placeholder={placeholder}
         classNames={{
