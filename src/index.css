@@ -1,11 +1,11 @@
 @font-face {
   font-family: "KoPub";
-  src: url("../public/assets/fonts/kopubbatang-regular.ttf");
+  src: url("/src/assets/fonts/kopubbatang-regular.ttf");
 }
 
 @font-face {
   font-family: "monserrat";
-  src: url("../public/assets/fonts/Montserrat-Medium.ttf");
+  src: url("/src/assets/fonts/Montserrat-Medium.ttf");
 }
 html {
   overflow-x: hidden;

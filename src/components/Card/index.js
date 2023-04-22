@@ -1,7 +1,7 @@
 import { BsFillTrash2Fill } from "react-icons/bs";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import "./Card.css";
-
+import defaultImage  from 'assets/img/default-not-found-image.svg'
 const Card = ({
   name,
   legend,
@@ -31,7 +31,7 @@ const Card = ({
 
       <div className="favorite-box">
         {favorite ? (
-          <AiFillStar {...favoriteIcon} color='#ff7070'/>
+          <AiFillStar {...favoriteIcon} color="#ff7070" />
         ) : (
           <AiOutlineStar {...favoriteIcon} />
         )}
@@ -42,7 +42,13 @@ const Card = ({
       </div>
 
       <div className="card-picture">
-        <img src={picture} alt={name} />
+        <img
+          src={picture}
+          alt={name}
+          onError={(currentTarget) => {
+            currentTarget.target.src = defaultImage;
+          }}
+        />
       </div>
 
       <div className="card-info">
