@@ -7,7 +7,10 @@ import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
 
 const RootPage = () => {
-  let teams = [
+  // let teams = [
+
+  // ];
+  const [teams, setTeams] = useState([
     {
       id: uuidv4(),
       label: "Develop",
@@ -36,8 +39,7 @@ const RootPage = () => {
       primaryColor: "#ffba05",
       secondaryColor: "#fff5d9",
     },
-  ];
-
+  ]);
   const [collaborators, setCollaborators] = useState([]);
 
   const addNewCollaborator = (col) => {
@@ -47,7 +49,16 @@ const RootPage = () => {
   };
 
   const addNewTeam = (team) => {
-    console.log(team);
+    setTeams([
+      ...teams,
+      {
+        id: uuidv4(),
+        label: team.teamName,
+        value: team.teamName,
+        primaryColor: team.teamPrimaryColor,
+        secondaryColor: team.teamSecondaryColor,
+      },
+    ]);
   };
 
   function deleteCollaborator(id) {
@@ -72,7 +83,7 @@ const RootPage = () => {
           addNewCollaborator={(collaborator) =>
             addNewCollaborator(collaborator)
           }
-          addNewTeam={addNewTeam}
+          addNewTeam={(team) => addNewTeam(team)}
         />
       </div>
 

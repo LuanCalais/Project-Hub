@@ -11,7 +11,8 @@ const Form = ({ teamNames, addNewCollaborator, addNewTeam }) => {
   const [pictureImageLink, setPictureImageLink] = useState("");
   const [team, setTeam] = useState("");
   const [teamName, setTeamName] = useState("");
-  const [teamColor, setTeamColor] = useState("");
+  const [teamPrimaryColor, setTeamPrimaryColor] = useState("");
+  const [teamSecondaryColor, setTeamSecondaryColor] = useState("");
 
   const saveInfo = (event) => {
     event.preventDefault();
@@ -75,9 +76,10 @@ const Form = ({ teamNames, addNewCollaborator, addNewTeam }) => {
         <form
           onSubmit={(event) => {
             event.preventDefault();
-            addNewTeam({ teamName, teamColor });
+            addNewTeam({ teamName, teamPrimaryColor, teamSecondaryColor });
             setTeamName("");
-            setTeamColor("");
+            setTeamPrimaryColor("");
+            setTeamSecondaryColor("");
           }}
         >
           <div className="box-inputs">
@@ -90,11 +92,18 @@ const Form = ({ teamNames, addNewCollaborator, addNewTeam }) => {
             />
 
             <Input
-              inputValue={teamColor}
-              placeholder="Insira a cor do time"
+              inputValue={teamPrimaryColor}
+              placeholder="Insira a cor do time (HEX)"
               type="color"
               require
-              onWrite={(value) => setTeamColor(value)}
+              onWrite={(value) => setTeamPrimaryColor(value)}
+            />
+            <Input
+              inputValue={teamSecondaryColor}
+              placeholder="Insira a cor secundária do time (HEX)"
+              type="color"
+              require
+              onWrite={(value) => setTeamSecondaryColor(value)}
             />
             <Button text="Criar Time" color="#fbb8b7" textColor="#fff" />
           </div>
