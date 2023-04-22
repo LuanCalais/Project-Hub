@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
 
 const RootPage = () => {
-  const teams = [
+  let teams = [
     {
       id: uuidv4(),
       label: "Develop",
@@ -38,7 +38,6 @@ const RootPage = () => {
     },
   ];
 
-  const today = useState("");
   const [collaborators, setCollaborators] = useState([]);
 
   const addNewCollaborator = (col) => {
@@ -93,7 +92,7 @@ const RootPage = () => {
         ))}
       </div>
 
-      <Footer today={today} />
+      <Footer />
     </>
   );
 };

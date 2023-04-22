@@ -15,17 +15,17 @@ const Form = ({ teamNames, addNewCollaborator, addNewTeam }) => {
 
   const saveInfo = (event) => {
     event.preventDefault();
-    addNewCollaborator({  
+    addNewCollaborator({
       collaboratorName,
       legend,
       positionName,
       pictureImageLink,
       team,
     });
-    setCollaboratorName('')
-    setLegend('')
-    setPositionName('')
-    setPictureImageLink('')
+    setCollaboratorName("");
+    setLegend("");
+    setPositionName("");
+    setPictureImageLink("");
   };
 
   return (
@@ -75,12 +75,14 @@ const Form = ({ teamNames, addNewCollaborator, addNewTeam }) => {
         <form
           onSubmit={(event) => {
             event.preventDefault();
-            addNewTeam("oskdaoskdasokd");
+            addNewTeam({ teamName, teamColor });
+            setTeamName("");
+            setTeamColor("");
           }}
         >
           <div className="box-inputs">
             <Input
-              value={teamName}
+              inputValue={teamName}
               placeholder="Insira o nome do time"
               maxLength="100"
               require
@@ -88,11 +90,11 @@ const Form = ({ teamNames, addNewCollaborator, addNewTeam }) => {
             />
 
             <Input
-              value={teamColor}
+              inputValue={teamColor}
               placeholder="Insira a cor do time"
               type="color"
               require
-              onWrite={(value) => setPictureImageLink(value)}
+              onWrite={(value) => setTeamColor(value)}
             />
             <Button text="Criar Time" color="#fbb8b7" textColor="#fff" />
           </div>
