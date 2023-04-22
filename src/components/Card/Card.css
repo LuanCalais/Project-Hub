@@ -27,6 +27,11 @@
   justify-content: center;
   color: #ffffff;
   font-size: 1.01rem;
+  
+}
+.card .card-header .clamp-lines  {
+  max-width: 190px;
+
 }
 .card .card-picture {
   height: 110px;
@@ -48,6 +53,7 @@
 
 .card .card-info {
   position: absolute;
+  max-width:104px;
   bottom: 25px;
 }
 
@@ -82,4 +88,8 @@
   top: 8px;
   color: rgb(179, 179, 179);
   cursor: pointer;
+}
+
+.clamp-lines__button {
+  display: none!important;
 }
