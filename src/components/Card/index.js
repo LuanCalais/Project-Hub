@@ -46,7 +46,6 @@ const Card = ({
           src={picture}
           alt={name}
           onError={(currentTarget) => {
-            console.log(currentTarget);
             currentTarget.target.src = defaultImage;
           }}
         />
