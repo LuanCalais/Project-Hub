@@ -29,10 +29,21 @@
   font-size: 1.01rem;
   
 }
-.card .card-header .clamp-lines  {
-  max-width: 190px;
 
+.clamp-line{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
+
+ .clamp-line-header  {
+  width: 150px;
+}
+
+.clamp-line-info{
+  width: 160px;
+}
+
 .card .card-picture {
   height: 110px;
   width: 110px;
@@ -53,7 +64,6 @@
 
 .card .card-info {
   position: absolute;
-  max-width:104px;
   bottom: 25px;
 }
 
@@ -65,7 +75,7 @@
   color: #666666;
 }
 
-.card .card-info sub {
+.card .card-info p {
   font-weight: 500;
   font-size: 13px;
   line-height: 17px;
