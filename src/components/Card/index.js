@@ -2,7 +2,6 @@ import { BsFillTrash2Fill } from "react-icons/bs";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import "./Card.css";
 import defaultImage from "assets/img/default-not-found-image.svg";
-import ClampLines from "react-clamp-lines";
 const Card = ({
   name,
   legend,
@@ -39,14 +38,7 @@ const Card = ({
       </div>
 
       <div className="card-header" style={cssHeader}>
-        <ClampLines
-          text={position}
-          lines={1}
-          id={`position_name_${id}`}
-          ellipsis="..."
-          moreText="Expand"
-          lessText="Collapse"
-        />
+        <h3 className="clamp-line clamp-line-header">{position}</h3>
       </div>
 
       <div className="card-picture">
@@ -60,25 +52,13 @@ const Card = ({
       </div>
 
       <div className="card-info">
-        <h5>
-          <ClampLines
-            text={name}
-            lines={1}
-            id={`name_${id}`}
-            title={name}
-            ellipsis="..."
-            moreText="Expand"
-            lessText="Collapse"
-          />
+        <h5 className="clamp-line clamp-line-info" title={name}>
+          {name}
         </h5>
-        <sub>
-          <ClampLines
-            text={legend}
-            lines={1}
-            id={`legend_${id}`}
-            title={legend}
-          />
-        </sub>
+
+        <p className="clamp-line clamp-line-info" title={legend}>
+          {legend}
+        </p>
       </div>
     </div>
   );
