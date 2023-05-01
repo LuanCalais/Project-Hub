@@ -36,6 +36,7 @@ const Form = ({ teamNames, addNewCollaborator, addNewTeam }) => {
         <form onSubmit={saveInfo}>
           <div className="box-inputs">
             <Input
+              type="text"
               inputValue={collaboratorName}
               placeholder="Escreva o nome do integrante"
               maxLength="50"
@@ -43,6 +44,7 @@ const Form = ({ teamNames, addNewCollaborator, addNewTeam }) => {
               onWrite={(value) => setCollaboratorName(value)}
             />
             <Input
+              type="text"
               inputValue={legend}
               placeholder="Escreva uma legenda"
               maxLength="50"
@@ -50,6 +52,7 @@ const Form = ({ teamNames, addNewCollaborator, addNewTeam }) => {
               onWrite={(value) => setLegend(value)}
             />
             <Input
+              type="text"
               inputValue={positionName}
               placeholder="Escreva o cargo"
               maxLength="50"
@@ -57,6 +60,7 @@ const Form = ({ teamNames, addNewCollaborator, addNewTeam }) => {
               onWrite={(value) => setPositionName(value)}
             />
             <Input
+              type="text"
               inputValue={pictureImageLink}
               placeholder="https://github.com/SeuRepositorio.png"
               maxLength="100"
@@ -84,6 +88,7 @@ const Form = ({ teamNames, addNewCollaborator, addNewTeam }) => {
         >
           <div className="box-inputs">
             <Input
+              type="text"
               inputValue={teamName}
               placeholder="Insira o nome do time"
               maxLength="100"

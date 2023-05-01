@@ -1,6 +1,13 @@
 import "./Input.css";
 
-const Input = ({ inputValue, maxLength, placeholder, require, onWrite }) => {
+const Input = ({
+  inputValue,
+  maxLength,
+  placeholder,
+  require,
+  onWrite,
+  type,
+}) => {
   const emitValue = (event) => {
     onWrite(event.target.value);
   };
@@ -8,7 +15,7 @@ const Input = ({ inputValue, maxLength, placeholder, require, onWrite }) => {
   return (
     <div className="input">
       <input
-        type="text"
+        type={type}
         value={inputValue}
         placeholder={placeholder}
         maxLength={maxLength}
